@@ -109,6 +109,33 @@ ol {
   max-width: 860px;
 }
 
+.section-split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.visual-card {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 10px;
+  box-shadow: 0 16px 34px rgba(17, 24, 39, 0.1);
+}
+
+.visual-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.visual-card--wide {
+  margin-top: 18px;
+}
+
 .accent {
   color: var(--text);
   font-weight: 600;
@@ -289,6 +316,10 @@ textarea:focus {
 }
 
 @media (max-width: 1000px) {
+  .section-split {
+    grid-template-columns: 1fr;
+  }
+
   .cols-4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -309,6 +340,11 @@ textarea:focus {
 
   .hero {
     padding-top: 72px;
+  }
+
+  .visual-card {
+    padding: 8px;
+    border-radius: 14px;
   }
 
   .cols-2,
